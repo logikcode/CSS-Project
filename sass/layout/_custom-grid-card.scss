@@ -1,0 +1,19 @@
+
+.row-card{
+  display: inline-block;
+  max-width:$grid-width;
+  text-align: center;
+}
+
+[class^="column-1-of-"] {
+  display: inline-block;
+  width: calc((#{$grid-width} - (#{$grid-vertical} * 2) )/ 3 );
+  background-color: black;
+  float: left;
+
+
+  &:not(:last-child){
+    margin-right: 2rem;
+  }
+}
+

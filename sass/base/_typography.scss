@@ -1,0 +1,56 @@
+
+
+body{
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: 1.5;
+  color: #777;
+  padding: 1rem;
+
+}
+
+
+.heading__primary--main {
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+  display: block;
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+
+  animation-name: headerMainAnimateFromLeft;
+  animation-duration: 3s;
+}
+
+.heading__primary--sub{
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+  display: block;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  animation-name: heading-Sub-AnimateFromRight;
+  animation-duration: 3s;
+}
+
+.section__heading-h3{
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  //text-align: center;
+
+}
+
+.heading-tertiary{
+  background-color: white;
+}
+
+.paragraph{
+  font-size: $default-font-size;
+  &:not(:last-child){
+    margin-bottom: 2rem;
+  }
+}

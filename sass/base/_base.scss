@@ -1,0 +1,17 @@
+
+html{
+  // this defines the value for 1rem which is 10px
+  font-size: 62.5%;
+}
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* not adding padding and border values to the height of any  element*/
+}
+
+
+

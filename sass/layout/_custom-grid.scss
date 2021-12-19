@@ -1,0 +1,45 @@
+
+
+.row{
+  max-width: $grid-width;
+  margin: 0 auto;
+  &:not(:last-child){
+    margin-bottom: $grid-horizontal;
+  }
+@include clearfix;
+}
+
+
+
+
+[class^="col-"]{
+  background-color: $color-white;
+  color: white;
+  float: left;
+
+  &:not(:last-child){
+    margin-right: $grid-vertical;
+  }
+}
+
+
+.col-1-of-2{
+
+  width: calc( (#{$grid-width} - #{$grid-vertical}) / 2);
+}
+
+.col-1-of-3{
+
+  width: calc((#{$grid-width} - (#{$grid-vertical} * 2)) / 3);
+}
+
+.col-1-of-4{
+  width: calc((#{$grid-width} - (#{$grid-vertical} * 3)) / 4)
+}
+
+.col-2-of-4{
+width: calc((#{$grid-width} / 2) - 1rem);
+}
+.col-2-of-3{
+  width: calc((100% - 2 * #{$grid-horizontal}) + #{$grid-horizontal});
+}

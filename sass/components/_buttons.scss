@@ -1,0 +1,110 @@
+
+.btn{
+  &,
+  &:link, &:visited{
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: inline-block;
+    /*padding: 1px 5px;*/
+    padding:1.5rem 3rem;
+    border-radius: 10rem;
+    transition: all 1s;
+    position: relative;
+    color: #777777;
+    font-weight: 400;
+
+    // this below styles are only applicable to the button element
+    border: none;
+    cursor: pointer;
+
+  }
+
+  &:active, &:focus{
+    outline: none;
+    transform: translateY(-.3rem);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  }
+
+  &:hover {
+    transform: translateY(-.3rem);
+    /* x-direction value, y-direction value, blurrish value and rgba color for the shadow*/
+    box-shadow: 0 1rem 1rem rgba(0,0,0,.2);
+
+    &::after{
+      transform: scaleX(1.2) scaleY(1.5);
+      opacity: 0;
+
+    }
+  }
+
+  &::after{
+
+    content: "";
+    display: inherit;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    background-color: $btn-white-background-color;
+    border-radius: 10rem;
+    z-index: -1;
+    transition: all .8s;
+  }
+
+  &--animated-from-down{
+    animation: btnMoveFromDown 1s ease-out .50s;
+    animation-fill-mode: backwards;
+  }
+
+
+  &--white{
+    background-color: $btn-white-background-color;
+    &::after{
+      background-color: $btn-white-background-color;
+    }
+  }
+
+  //&:hover{
+  //  background-color: $color-primary-light;
+  //  transform: translateY(-2px);
+  //  box-shadow: 2px 3px 3px rgba(black, .5);
+  //}
+
+  //&:active{
+  //  transform: translateY(0);
+  //}
+
+  &--green{
+    background-color: $color-primary-dark;
+    font-weight: 700;
+    color: $color-white;
+    //background-color: $btn-white-background-color;
+    &::after{
+      background-color: $color-grey-light-1;
+    }
+  }
+}
+
+
+.btn-text{
+  &:link,
+  &:visited{
+    text-decoration: none;
+    border-bottom: .2rem solid black;
+    padding: .6rem;
+    font-size: $default-font-size;
+    display: inline-block;
+    background-image: linear-gradient(to top,$color-primary-dark,$color-primary-light);
+    font-weight: 500;
+    color: #f7f7f7;
+    transition: all .5s;
+  }
+
+  &:hover{
+    transform: translateY(-0.5rem) scale(1.2);
+  }
+}
+

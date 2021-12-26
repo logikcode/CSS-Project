@@ -13,10 +13,10 @@
 
 
 [class^="col-"]{
-  background-color: $color-white;
+  //background-color: orangered;
   color: white;
   float: left;
-
+  @include clearfix;
   &:not(:last-child){
     margin-right: $grid-vertical;
   }
@@ -25,12 +25,12 @@
 
 .col-1-of-2{
 
-  width: calc( (#{$grid-width} - #{$grid-vertical}) / 2);
+  width: calc( (#{$grid-width} - (#{$grid-vertical}) *2) / 2);
 }
 
 .col-1-of-3{
 
-  width: calc((#{$grid-width} - (#{$grid-vertical} * 2)) / 3);
+  width: calc( (#{$grid-width} - (#{$grid-vertical} * 2) ) / 3);
 }
 
 .col-1-of-4{

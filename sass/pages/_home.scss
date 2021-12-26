@@ -6,7 +6,6 @@
   transition: all;
   padding: 1rem;
   -webkit-background-clip: text;
-  background-clip: text;
   font-size: 3.5rem;
   font-weight: 700;
   color: transparent;
@@ -53,10 +52,10 @@ section{
 
 [class^="section__container-"]{
   height: 40rem;
-  width: calc((#{$grid-width} - 2rem) /2);
+  width: calc((#{$grid-width} - 3rem) /2);
   float: left;
   &:not(:last-child){
-    margin-right: $grid-vertical;
+    margin-right:1rem;
   }
 }
 

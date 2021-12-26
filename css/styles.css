@@ -133,7 +133,7 @@ body {
   display: block;
   transition: all .3s; }
   .form__input::-webkit-input-placeholder {
-    color: #999; }
+    color: #999999; }
   .form__input:focus:invalid {
     border-bottom: 3px solid #ff7730; }
   .form__input:focus {
@@ -273,7 +273,7 @@ body {
 .composition {
   position: relative;
   margin-left: 2rem;
-  height: 20rem;
+  height: 30rem;
   width: 40rem; }
   .composition__img {
     width: 50%;
@@ -325,6 +325,90 @@ body {
   .feature-box__text {
     background-color: white; }
 
+.footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 10rem;
+  font-size: 1.4rem; }
+  .footer__link:link, .footer__link:visited {
+    text-transform: uppercase;
+    background-color: #333333;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline;
+    transition: all .2s; }
+  .footer__link:hover, .footer__link:active {
+    transform: rotate(5deg) scale(2);
+    cursor: pointer;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
+    color: #55c57a;
+    background-color: #ffffff; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 8rem; }
+  .footer__logo {
+    width: 30rem;
+    height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #999999;
+    padding-top: 1rem;
+    display: inline-block; }
+  .footer__list:first-child {
+    padding-left: .2rem; }
+  .footer__item {
+    list-style: none;
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 2rem; }
+  .footer__copyright {
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer__box {
+    width: 80%;
+    float: right; }
+  .footer__copyright-text {
+    border-top: 1px solid #999999;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer__analogue-clock {
+    top: 0;
+    left: 0;
+    position: relative;
+    height: 20rem;
+    width: 20rem;
+    background-color: floralwhite;
+    border-radius: 100%; }
+  .footer__seconds-hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70px;
+    width: 1px;
+    transform: rotate(170deg);
+    border: 1px solid red;
+    transform-origin: 0 0;
+    backface-visibility: hidden; }
+  .footer__minutes-hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70px;
+    width: 1px;
+    transform: rotate(350deg);
+    border: 1px solid black;
+    transform-origin: 0 0;
+    backface-visibility: hidden; }
+  .footer__hours-hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 1px;
+    transform: rotate(90deg);
+    border: 1px solid blue;
+    transform-origin: 0 0;
+    backface-visibility: hidden; }
+
 .card {
   background-color: #ff7730;
   perspective: 150rem;
@@ -369,7 +453,7 @@ body {
     background-blend-mode: screen;
     margin-top: 2rem; }
     .card__picture-1 {
-      background-image: linear-gradient(to bottom right, rgba(247, 247, 247, 0.3), black), url("../../max-img/max-logo.png");
+      background-image: linear-gradient(to bottom right, rgba(247, 247, 247, 0.3), black), url("../max-img/max-logo.png");
       background-repeat: no-repeat;
       background-size: cover; }
   .card .card__heading {
@@ -545,17 +629,20 @@ body {
     clear: both; }
 
 [class^="col-"] {
-  background-color: #ffffff;
   color: white;
   float: left; }
+  [class^="col-"]::after {
+    content: "";
+    display: table;
+    clear: both; }
   [class^="col-"]:not(:last-child) {
     margin-right: 2rem; }
 
 .col-1-of-2 {
-  width: calc( (114rem - 2rem) / 2); }
+  width: calc( (114rem - (2rem) *2) / 2); }
 
 .col-1-of-3 {
-  width: calc((114rem - (2rem * 2)) / 3); }
+  width: calc( (114rem - (2rem * 2) ) / 3); }
 
 .col-1-of-4 {
   width: calc((114rem - (2rem * 3)) / 4); }
@@ -587,7 +674,6 @@ body {
   transition: all;
   padding: 1rem;
   -webkit-background-clip: text;
-  background-clip: text;
   font-size: 3.5rem;
   font-weight: 700;
   color: transparent;
@@ -614,10 +700,10 @@ section {
 
 [class^="section__container-"] {
   height: 40rem;
-  width: calc((114rem - 2rem) /2);
+  width: calc((114rem - 3rem) /2);
   float: left; }
   [class^="section__container-"]:not(:last-child) {
-    margin-right: 2rem; }
+    margin-right: 1rem; }
 
 .section-feature {
   padding: 20rem 0;
@@ -648,7 +734,7 @@ section {
 /* THIS PART OF THE CSS IS RESPONSIBLE FOR PARTITIONING THE CONTAINER FOR FORM INTO TWO 
   USING BACKGROUND-IMAGE: LINEAR-GRADIENT PROPERTY */
 .booking {
-  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../../img/nat-10.jpg);
+  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
   background-size: 100%;
   height: 50rem;
   border-radius: 3px;

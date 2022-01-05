@@ -135,7 +135,7 @@ body {
   .form__input::-webkit-input-placeholder {
     color: #999999; }
   .form__input:focus:invalid {
-    border-bottom: 3px solid #ff7730; }
+    border-bottom: 3px solid rgba(245, 113, 9, 0.95); }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -316,7 +316,7 @@ body {
     background-color: white;
     font-size: 6rem;
     margin-bottom: .5rem;
-    background-image: linear-gradient(to bottom, #ffb900, #ff7730);
+    background-image: linear-gradient(to bottom, #ffb900, rgba(245, 113, 9, 0.95));
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block; }
@@ -410,7 +410,7 @@ body {
     backface-visibility: hidden; }
 
 .card {
-  background-color: #ff7730;
+  background-color: rgba(245, 113, 9, 0.95);
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
@@ -443,7 +443,7 @@ body {
     transform: rotateY(0);
     opacity: 1; }
     .card:hover .card__side--back-1 {
-      background-image: linear-gradient(to bottom right, #ffb900, #ff7730); }
+      background-image: linear-gradient(to bottom right, #ffb900, rgba(245, 113, 9, 0.95)); }
     .card:hover .card__side--back-2 {
       background-image: linear-gradient(to bottom right, #777777, #000000); }
   .card__picture {
@@ -666,6 +666,114 @@ body {
   [class^="column-1-of-"]:not(:last-child) {
     margin-right: 2rem; }
 
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  height: 7.3rem;
+  width: 7.3rem;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  border-radius: 100%;
+  background-color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  z-index: 300; }
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  position: fixed;
+  top: 3.5rem;
+  right: 3.5rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  border-radius: 100%;
+  z-index: 100;
+  transition: transform 0.8s cubic-bezier(0.08, 0, 0.07, 1);
+  opacity: 0; }
+
+.navigation__nav {
+  height: 70vh;
+  z-index: 200;
+  background-color: rgba(245, 113, 9, 0.95);
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.256, 1.55);
+  opacity: 0;
+  width: 0; }
+
+.navigation__list {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  list-style: none;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .5rem 2rem;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 80%, white 100%);
+  background-size: 220%;
+  transition: all .4s; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #333333;
+  transform: translateX(1rem); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  opacity: 1;
+  z-index: 200; }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation__icon {
+  margin-top: 3.5rem;
+  position: relative; }
+  .navigation__icon, .navigation__icon::after, .navigation__icon::before {
+    width: 3rem;
+    height: 2px;
+    background-color: #333333;
+    display: inline-block;
+    transition: all .2s; }
+  .navigation__icon::after, .navigation__icon::before {
+    content: "";
+    position: absolute;
+    left: 0; }
+  .navigation__icon::after {
+    top: 1rem; }
+  .navigation__icon::before {
+    top: -1rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1.2rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1.2rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+  background-color: #2998ff; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
 .section__heading-h2 {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -707,7 +815,7 @@ section {
 
 .section-feature {
   padding: 20rem 0;
-  background-image: linear-gradient(to right, #ff7730, rgba(255, 185, 0, 0.5));
+  background-image: linear-gradient(to right, #f57109, rgba(255, 185, 0, 0.5));
   background-size: cover;
   transform: skewY(-5deg);
   margin-top: 3rem; }
@@ -715,7 +823,7 @@ section {
     transform: skewY(5deg); }
 
 .section-destination {
-  background-color: #ff7730;
+  background-color: rgba(245, 113, 9, 0.95);
   padding: 18rem 0;
   margin-top: -10rem;
   margin-bottom: 6rem; }

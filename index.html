@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/font-icon-styles.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="./css/font-icon-styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link href="./css/styles.css" rel="stylesheet">
     <script src="./test.js"></script>
-    <link rel="shortcut icon" type="image/png" href="./max-img/max-favicon.png">
+    <link href="./max-img/max-favicon.png" rel="shortcut icon" type="image/png">
     <title>Manuel.NG</title>
 </head>
 
@@ -15,8 +15,8 @@
 <!-- The Navigation Section -->
 
 <div class="navigation">
-    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-    <label for="navi-toggle" class="navigation__button">
+    <input class="navigation__checkbox" id="navi-toggle" type="checkbox">
+    <label class="navigation__button" for="navi-toggle">
         <span class="navigation__icon">&nbsp;</span>
     </label>
 
@@ -26,19 +26,19 @@
     <nav class="navigation__nav">
         <ul class="navigation__list">
             <li class="navigation__item">
-                <a href="" class="navigation__link">About MAX</a>
+                <a class="navigation__link" href="">About MAX</a>
             </li>
             <li class="navigation__item">
-                <a href="" class="navigation__link">Our Services</a>
+                <a class="navigation__link" href="">Our Services</a>
             </li>
             <li class="navigation__item">
-                <a href="" class="navigation__link">Our Mission</a>
+                <a class="navigation__link" href="">Our Mission</a>
             </li>
             <li class="navigation__item">
-                <a href="" class="navigation__link">Locations</a>
+                <a class="navigation__link" href="">Locations</a>
             </li>
             <li class="navigation__item">
-                <a href="" class="navigation__link">Talk to Us</a>
+                <a class="navigation__link" href="">Talk to Us</a>
             </li>
         </ul>
     </nav>
@@ -46,12 +46,12 @@
 
 <header class="header">
     <div class="header__logo-container">
-        <img src="./max-img/max-logo.png" alt="site-logo" class="header__logo">
+        <img alt="site-logo" class="header__logo" src="./max-img/max-logo.png">
     </div>
     <div class="heading__container">
         <span class="heading__primary--main">Vision for Africa</span>
         <span class="heading__primary--sub" >...Ride With Us</span>
-        <a href="#" class="btn btn--white btn--animated-from-down">Checkout</a>
+        <a class="btn btn--white btn--animated-from-down" href="#">Checkout</a>
     </div>
 </header>
 <hr/>
@@ -78,14 +78,14 @@
                     A ab assumenda corporis debitis dolorem ex ipsa iste natus quaerat similique, sint!
                 </p>
 
-                <a href="#" class="btn-text">Learn more &rarr;</a>
+                <a class="btn-text" href="#">Learn more &rarr;</a>
             </div>
 
             <div class="section__container-img">
                 <div class="composition">
-                    <img src="./max-img/scudeto-bike.png"  alt="image one" class="composition__img composition__img--img1">
-                    <img src="./max-img/carbon-card-image.png" alt="image two" class="composition__img composition__img--img2">
-                    <img src="./max-img/max-power-bike.png"  alt="image three" class="composition__img composition__img--img3">
+                    <img alt="image one"  class="composition__img composition__img--img1" src="./max-img/scudeto-bike.png">
+                    <img alt="image two" class="composition__img composition__img--img2" src="./max-img/carbon-card-image.png">
+                    <img alt="image three"  class="composition__img composition__img--img3" src="./max-img/max-power-bike.png">
                 </div>
             </div>
 
@@ -142,7 +142,7 @@
     </section>
 
     <!-- THIRD SECTION -- Card Section -->
-    <section class="section-destination u-margin-top-medium">
+    <section class="section-destination u-margin-top-medium" id="section-dest" >
 
         <div class="u-center-text u-margin-bottom-medium u-heading-break">
 
@@ -165,9 +165,7 @@
                         </div>
 
                         <h2 class="card__heading">
-                               <span class="span__heading span__heading-1">
-                                   Metro Africa Xpress
-                               </span>
+                               <span class="span__heading span__heading-1">Metro Africa Xpress</span>
                         </h2>
 
                         <div class="card__details">
@@ -182,7 +180,7 @@
                                 <p class="card__price-value">N1,350/day</p>
                                 <p class="card__weekdays">Mon-Fri</p>
                             </div>
-                            <a href="#" class="btn btn--white">Call Us</a>
+                            <a class="btn btn--white" href="#popup">Call Us</a>
                         </div>
                     </div>
 
@@ -220,7 +218,7 @@
                             </div>
 
                             <div>
-                                <a href="#" class="btn btn--green">Call Us</a>
+                                <a class="btn btn--green" href="#popup">Call Us</a>
                             </div>
                         </div>
                     </div>
@@ -250,18 +248,22 @@
                             </ul>
                         </div>
                     </div>
+
+                    <div>
+                        <a href="#popup" class="btn btn--white u-margin-top-medium"> Call Us </a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <a href="#" class="btn btn--green u-margin-top-big">Give Us a Call</a>
+        <a class="btn btn--white u-margin-top-big" href="#">Give Us a Call</a>
     </section>
 
     <!---THE STORIES SECTION WITH BACKGROUND VIDEOS-->
 
     <section class="section-stories u-margin-bottom-big">
         <div class="bg-video">
-            <video class="bg-video__content" autoplay muted loop>
+            <video autoplay class="bg-video__content" loop muted>
                 <source src="max-img/video.mp4" type="video/mp4">
                 <source src="max-img/video.webm" type="video/webm">
                 Browser not supported!
@@ -277,7 +279,7 @@
         <div class="row">
             <div class="story">
                 <figure class="story__shape">
-                    <img src="./max-img/max-power-bike.png" alt="Be One of Our Beneficiaries" class="story__image">
+                    <img alt="Be One of Our Beneficiaries" class="story__image" src="./max-img/max-power-bike.png">
                     <figcaption class="story__caption">Champion Paul</figcaption>
                 </figure>
 
@@ -298,7 +300,7 @@
             <div class="story">
 
                 <figure class="story__shape">
-                    <img src="./max-img/max-svg-logo.svg" alt="Be One of Our Beneficiaries" class="story__image">
+                    <img alt="Be One of Our Beneficiaries" class="story__image" src="./max-img/max-svg-logo.svg">
                     <figcaption class="story__caption">Champion Faji</figcaption>
                 </figure>
 
@@ -313,7 +315,7 @@
             </div>
 
             <div>
-                <a href="#" class=" btn-text u-margin-top-big">See more of success stories &rarr;</a>
+                <a class=" btn-text u-margin-top-big" href="#">See more of success stories &rarr;</a>
             </div>
 
         </div>
@@ -334,28 +336,28 @@
                         </div>
                         <div class="form__group">
 
-                            <input type="text" class="form__input" placeholder="First Name" id="first-name" required>
-                            <label for="first-name" class="form__label">First Name</label>
+                            <input class="form__input" id="first-name" placeholder="First Name" required type="text">
+                            <label class="form__label" for="first-name">First Name</label>
                         </div>
 
                         <div class="form__group">
 
-                            <input type="email" class="form__input" placeholder="Email Address" id="form-email" required>
-                            <label for="form-email" class="form__label">Email</label>
+                            <input class="form__input" id="form-email" placeholder="Email Address" required type="email">
+                            <label class="form__label" for="form-email">Email</label>
                         </div>
                         <div class="form__group u-margin-bottom-medium">
 
                             <div class="form__radio-group form__radio-group-1">
-                                <input type="radio" class="form__radio-input" id="small" name="size">
-                                <label for="small" class="form__radio-label">
+                                <input class="form__radio-input" id="small" name="size" type="radio">
+                                <label class="form__radio-label" for="small">
                                     <span class="form__radio-btn"></span>
                                     Small Radio
                                 </label>
                             </div>
 
                             <div class="form__radio-group form__radio-group-2">
-                                <input type="radio" class="form__radio-input " id="large" name="size">
-                                <label for="large" class="form__radio-label">
+                                <input class="form__radio-input " id="large" name="size" type="radio">
+                                <label class="form__radio-label" for="large">
                                     <span class="form__radio-btn"></span>
                                     Large Radio
                                 </label>
@@ -376,6 +378,36 @@
             </div>
         </div>
     </section>
+
+    <!-- PURE CSS POP UP MARK-UP SECTION OF THE PAGE -->
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img alt="max photo" class="popup__image" src="./max-img/max-man-on-electric-bike.png">
+                <img alt="max photo" class="popup__image" src="./max-img/max-electric-bike-keke-car.png">
+            </div>
+
+            <div class="popup__right">
+                <a href="#section-dest" class="popup__close-btn">&times</a>
+                <h2 class="section__heading-h2">Start With Us Now</h2>
+                <h3 class="section__heading-h3 u-margin-bottom-small">Important &ndash; Please read these terms before using the site</h3>
+
+                <p class="popup__text">
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                    onsequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                    erspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                    onsequatur, vel illum qui dolorem eum fugiat quo voluptas null
+                    erspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                    onsequatur, vel illum qui dolorem eum fugiat quo voluptas null
+                </p>
+                <a class="btn btn--green" href="#">Book Now</a>
+            </div>
+        </div>
+    </div>
 
 
     <!--<div class="row-card">
@@ -422,18 +454,18 @@
 <footer class="footer">
 
     <div class="footer__logo-box">
-        <img src="./max-img/max-logo.png" alt="max-logo" class="footer__logo">
+        <img alt="max-logo" class="footer__logo" src="./max-img/max-logo.png">
     </div>
 
     <div class="row">
         <div class="col-1-of-2">
             <div class="footer__navigation">
                 <ul class="footer__list">
-                    <li class="footer__item"><a href="#" class="footer__link">Footer 1</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Footer 2</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Footer 3</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Footer 4</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Footer 5</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Footer 1</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Footer 2</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Footer 3</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Footer 4</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Footer 5</a></li>
                 </ul>
             </div>
         </div>

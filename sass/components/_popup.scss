@@ -1,0 +1,95 @@
+
+.popup{
+
+  background-color: rgba($color-black, .8);
+  height: 100vh;
+  width: 100%;
+  //margin: 0 auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+
+  &__content{
+    @include position-center;
+    display: table;
+    overflow: hidden;
+
+    width: 75%;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    border-right: 3px;
+    transform: translate(-50%, -50%) scale(.25);
+    transition: all .3s .2s;
+
+  }
+
+
+  &__image{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  // the image part
+  &__left{
+    width: 33.333%;
+    display: table-cell;
+
+  }
+
+  // for the text part
+  &__right{
+    width: 66.666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+  }
+
+
+
+  &__text{
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    column-count: 2;
+    column-gap: 2rem;
+    column-rule: 1px solid $color-grey-dark-2;
+
+    -moz-hyphens: auto;
+    hyphens: auto;
+
+  }
+
+  &:target{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content{
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close-btn{
+    &:visited,
+    &:link {
+      position: absolute;
+      top: 1rem;
+      right: 2.5rem;
+      text-decoration: none;
+      color: $color-grey-dark-3;
+      font-size: 5rem;
+      transition: all .3s;
+      line-height: 1;
+    }
+
+    &:hover{
+      color: darkgreen;
+    }
+
+  }
+
+
+}

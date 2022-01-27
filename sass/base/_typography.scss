@@ -5,42 +5,78 @@ body{
   font-weight: 400;
   font-size: $default-font-size;
   line-height: 1.5;
-  color: #777;
-  padding: 1rem;
+  color: #777777;
+}
+
+.heading__primary{
+  &--main{
+    font-family: "Lato", sans-serif;
+    color: #ffffff;
+    display: block;
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: 1rem;
+
+    animation-name: headerMainAnimateFromLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+
+    @include respond(tab-port){
+      font-size: 2rem;
+      letter-spacing: .5rem;
+    }
+  }
+
+  &--sub{
+    font-family: "Lato", sans-serif;
+    color: #ffffff;
+    display: block;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    animation-name: heading-Sub-AnimateFromRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+
+    @include respond(tab-land){
+      font-size: 1.6rem;
+    }
+
+    @include respond(tab-port){
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+  }
 
 }
 
 
-.heading__primary--main {
-  font-family: "Lato", sans-serif;
-  color: #ffffff;
-  display: block;
-  font-size: 4rem;
-  font-weight: 600;
-  letter-spacing: 0.2rem;
 
-  animation-name: headerMainAnimateFromLeft;
-  animation-duration: 3s;
-}
-
-.heading__primary--sub{
-  font-family: "Lato", sans-serif;
-  color: #ffffff;
-  display: block;
-  font-size: 3rem;
-  font-weight: 500;
-  letter-spacing: 0.1rem;
-  margin-bottom: 2rem;
-  text-transform: capitalize;
-  animation-name: heading-Sub-AnimateFromRight;
-  animation-duration: 3s;
-}
 
 .section__heading-h3{
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  //text-align: center;
+  text-align: left;
+  background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light,);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  @include respond(tab-port){
+    font-size: 2rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light,);
+   -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  @include respond(phone){
+    font-size: 1.6rem;
+
+  }
 
 }
 
@@ -52,5 +88,11 @@ body{
   font-size: $default-font-size;
   &:not(:last-child){
     margin-bottom: 2rem;
+  }
+  @include respond(phone) {
+font-size: $font-size-small;
+    font-weight: 400;
+    line-height: 1.1;
+
   }
 }

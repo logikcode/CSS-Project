@@ -4,7 +4,7 @@
   height: 90vh;
   /*using two images in the same element by using background-image
   properties (1) gradient and png image */
-  background-image: linear-gradient(to bottom right , rgba($color-primary-light, 0.5), rgba($color-primary-dark, 0.5)), url(../max-img/max-lady-on-electric-bike-header.png);
+  background-image: linear-gradient(to bottom right , rgba(white, 0.5), rgba(transparent, 0.5)), url(../../max-img/max-lady-on-electric-bike-header.png);
   background-size: cover;
   //clip-path: polygon(0 0, 50% 80%, 100% 100%, 0% 100%);
   position: relative;

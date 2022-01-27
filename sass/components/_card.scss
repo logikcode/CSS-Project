@@ -1,7 +1,8 @@
 
 
 .card{
-  background-color: $color-secondary-dark;
+  border-radius: $card-border-radius;
+  background-color: $color-grey-dark-3;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
@@ -10,7 +11,7 @@
 
 
   &__side{
-    border-radius: 3rem;
+    border-radius: $card-border-radius;
     height: 40rem;
     color: $color-white;
     font-size: 2rem;
@@ -76,29 +77,47 @@
     color: $color-white;
     display: inline-block;
     position: absolute;
-    top: 62%;
+    top: 65%;
+    margin: 0 auto;
 
     left: 8rem;
     text-align: center;
     border-bottom: 2px solid yellow;
     box-shadow: 0 3px 3px #cdb332;
     width: 50%;
+
+    @include respond(phone) {
+      font-size: 2.2rem;
+      left: 2rem;
+      width: 90%;
+      text-align: center;
+
+    }
   }
 
   .span__heading{
     -webkit-box-decoration-break: clone;
     padding: 1rem 1.5rem;
+
+    @include respond(phone){
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      font-weight: 500;
+      font-size: 2.5rem;
+
+    }
   }
   &-1{
     // back-ground-image linear gradient to be here
   }
-&__cta{
-  //background-color: $color-grey;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  &__cta{
+    //background-color: $color-grey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   &__price-box{
     margin-bottom: 7rem;
@@ -113,34 +132,48 @@
     font-size: 2.2rem;
     font-weight: 100;
   }
+
+  &__details{
+    margin: .5rem auto;
+
+  }
 }
 
 
 // This part is the make it stick part
 .card__row{
-  max-width: 35rem;
+  width: 100%;
+  height: 40rem;
+  border-radius: $card-border-radius;
   background-color: $color-grey;
   background-image: linear-gradient(to right, $color-grey, $color-black);
   //border-top-left-radius: 3rem;
   overflow: hidden;
-  height: 40rem;
+  // height: 40rem;
 }
 
 .card__col-1-of-2{
- background-image: linear-gradient($color-black, $color-grey);
-  max-width: 10%;
+  background-image: linear-gradient($color-black, $color-grey);
+  max-width: 20%;
   float: left;
-  margin-right: .3rem;
-  text-align: center;
+  //margin-right: .3rem;
+  text-align: left;
   padding: .2rem;
   color: #ffa200;
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 700;
   height: 25.7rem;
-  //background-color: $color-grey;
+
+  @include respond(phone) {
+    width: 100%;
+    display: inline-block;
+  }
 
   &-char{
+    display: block;
     margin-top: 0;
+    width: 100%;
+    text-align: center;
     &:not(:last-child){
       margin-bottom: 0;
 
@@ -160,47 +193,60 @@
 }
 
 .card__col-2-of-2{
-// background-image: linear-gradient($color-grey, $color-black);
-  //max-width: 91%;
+  // background-image: linear-gradient($color-grey, $color-black);
+  width: 80%;
   float: left;
-  .card__col-2-of-2--heading{
-    color: $color-white;
-    padding-left: 1rem;
+  text-align: left;
+  margin-left: 1rem;
+
+  @include respond(phone) {
+    margin-left: 0;
+
   }
+
+
 }
+
+//&--heading{
+//  color: $color-white;
+//  padding-left: 1rem;
+//  margin: 0 auto;
+//  font-weight: 700;
+//  font-size: 2.5rem
+//}
 
 .card__list{
   list-style: none;
-  width: auto;
+  width: 100%;
   margin: 0 auto;
-  li{
-    text-align: justify;
-    font-size: 1.8rem;
+  text-align: center;
+
+  @include respond(phone) {
+    width: 100%;
+
+  }
+
+  &-item {
+
+    margin:0 2rem;
+    width: 100%;
+    text-align: left;
+    border-bottom: none;
+    font-size: $font-size-medium;
     padding-bottom: 0;
-    padding-top: 1rem;
-    font-weight: 100;
+    padding-left: .5rem;
+    font-weight: 500;
     text-transform: capitalize;
 
-    &:not(:last-child){
-
-    }
-  }
-
-
-  .card__list-item {
-    font-size: 1.5rem;
-    font-weight: 100;
-    margin-left: 1rem;
-    //background-color: red;
-    width: 30rem;
-    text-align: center;
-    border-bottom: none;
     &:last-child{
-
       box-shadow: 0 2px 3px yellow;
     }
-    &:first-child{ margin-top: .5rem}
+
+    &:first-child{ margin-top: 1rem}
+
+
   }
+
 }
 
 .clearfix:after{

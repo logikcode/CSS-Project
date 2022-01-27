@@ -12,6 +12,16 @@
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 
+  @include respond(phone){
+    font-size: 2.5rem;
+    width: 100%;
+  }
+
+
+  @include respond(tab-port){
+    font-size: 2.7rem;
+    width: 100%;
+  }
 
 
   &:hover{
@@ -61,7 +71,7 @@ section{
 
 .section-feature{
   padding: 20rem 0;
-  background-image: linear-gradient(to right, rgba($color-secondary-dark, 1), rgba($color-secondary-light, .5));
+  background-image: linear-gradient(to right, rgba($color-secondary-dark, 1), rgba($color-secondary-dark, .4));
   background-size: cover;
   transform: skewY(-5deg);
   margin-top: 3rem;
@@ -73,10 +83,16 @@ section{
 }
 
 .section-destination{
-  background-color: $color-secondary-dark;
+  background-color: $color-grey-dark-3;
   padding: 18rem 0;
   margin-top: -10rem;
   margin-bottom:6rem;
+
+  //transform: skewY(-5deg);
+  //& > * {
+  //  transform: skewY(1deg);
+  //}
+
 }
 
 .feature__box--heading{
@@ -111,7 +127,48 @@ section{
   box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 &__form{
   width: 50%;
-  
-}
 }
 
+
+
+  /*
+    the flex experimental part
+   */
+
+}
+
+.containe{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 4rem 0;
+
+  @include respond(phone){
+    //display: grid;
+    //grid-template-rows: repeat(1, 1fr);
+    //grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-flow: column;
+
+  }
+}
+
+.flex-item{
+  //flex: 1;
+  width: 30rem;
+
+}
+.one{
+  background-color: red;
+}
+.two{
+  background-color: black;
+
+}
+
+.three{
+  background-color: #2998ff;
+}
+.four{
+  background-color: #fb565e;
+}

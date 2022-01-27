@@ -1,7 +1,29 @@
 
+/* Responsive Design Work flow for SASS Project
+From base -> typography -> General Layout -> Grid -> Page Layout -> Components
+ */
+
 html{
   // this defines the value for 1rem which is 10px
   font-size: 62.5%;
+
+  @include respond(tab-port) { // less than 900px
+    font-size: 50%; // 1rem is 8px
+
+  }
+
+  @include respond(phone){ // less than 600px
+
+    font-size: 50%; // 1rem is 8px
+  }
+
+  @include respond(tab-land){ //less than 1200px
+    font-size: 56.25%; // 1rem is 9px
+  }
+
+  @include respond(big-device){ // above 1800px
+    font-size: 75%; // 1rem is 12px
+  }
 }
 
 
@@ -13,5 +35,13 @@ html{
   box-sizing: border-box; /* not adding padding and border values to the height of any  element*/
 }
 
+
+body{
+  box-sizing: border-box;
+  padding: 3rem;
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
 
 

@@ -1,4 +1,4 @@
-@mixin clearfix{
+@mixin clear-fix {
   &::after{
     content: "";
     display: table;
@@ -8,8 +8,63 @@
 }
 
 @mixin position-center{
+  background-color: black;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/*
+  0-600px -> small device
+  600px - 900px   -> tablet device
+  900px - 1200px  -> tablet -land
+  [1200 - 1800px]  -> // this is where the normal css gets applicable
+  1800+           -> big-desktop
+ */
+
+
+
+
+/*
+$breakpoint argument choices
+- phone
+-tab-portrait
+-tab-landscape
+- big-screen
+ */
+
+/*
+Unit measurement as it concerns media queries has its own particularity.
+The value comes from the browser itself as against the root of the document.
+So, base on this, em as unit of measurement is preferred.
+
+The default for 1em -> 16px. // the 16px comes from the browser
+ */
+
+@mixin respond ($breakpoint) {
+  @if ($breakpoint == tab-port) {
+    @media(max-width: 56.25em) { // less than 900px
+      @content
+    }
+  }
+
+  @if ($breakpoint == phone) { //less than 600px
+    @media(max-width: 37.5em) {
+      @content}
+  }
+
+
+  @if ($breakpoint == tab-land) { // less than 1200px
+    @media(max-width: 75em) {
+      @content
+    }
+  }
+
+  @if ($breakpoint == big-screen) { // greater than 1800px
+    @media(min-width: 112.5em) {
+      @content
+    }
+  }
+
 }

@@ -6,6 +6,7 @@ From base -> typography -> General Layout -> Grid -> Page Layout -> Components
 html{
   // this defines the value for 1rem which is 10px
   font-size: 62.5%;
+  background-color: rgba($color-grey, 1);
 
   @include respond(tab-port) { // less than 900px
     font-size: 50%; // 1rem is 8px

@@ -71,13 +71,18 @@ section{
 
 .section-feature{
   padding: 20rem 0;
-  background-image: linear-gradient(to right, rgba($color-secondary-dark, 1), rgba($color-secondary-dark, .4));
+  background-image: linear-gradient(to bottom, rgba($color-secondary-dark, 1), rgba($color-secondary-dark, 1));
   background-size: cover;
   transform: skewY(-5deg);
   margin-top: 3rem;
 
   & > * {
     transform: skewY(5deg);
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+    margin-top: 1.5rem;
   }
 
 }
@@ -92,6 +97,10 @@ section{
   //& > * {
   //  transform: skewY(1deg);
   //}
+  @include respond(tab-port) {
+    padding: 10rem 0;
+    margin-bottom: 3rem;
+  }
 
 }
 
@@ -102,13 +111,18 @@ section{
 .section-stories{
   padding: 15rem 0;
   position: relative;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+
 }
 /*
   The booking part of the page
  */
 .section__booking{
   padding: 15rem 0;
-  background-image: linear-gradient(to right,$color-primary, $color-primary-light);
+  background-image: linear-gradient(to right,$color-secondary-dark, $color-secondary-light);
 
 }
 /* THIS PART OF THE CSS IS RESPONSIBLE FOR PARTITIONING THE CONTAINER FOR FORM INTO TWO 

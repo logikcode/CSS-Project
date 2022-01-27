@@ -27,7 +27,6 @@
 
 
 [class^="col-"] {
-
   color: white;
   float: left;
   @include clear-fix;
@@ -38,13 +37,12 @@
     @include respond(tab-port){
       margin-right: 0;
       margin-bottom: $gutter-horizontal-small;
-
     }
-
   }
 
   @include respond(tab-port){
     width: 100% !important;
+    margin: 0 auto;
   }
 
 

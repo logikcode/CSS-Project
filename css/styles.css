@@ -841,7 +841,8 @@ body {
         margin-bottom: 2rem; } }
   @media (max-width: 56.25em) {
     [class^="col-"] {
-      width: 100% !important; } }
+      width: 100% !important;
+      margin: 0 auto; } }
 
 .col-1-of-2 {
   width: calc( (114rem - (2rem) *2) / 2); }

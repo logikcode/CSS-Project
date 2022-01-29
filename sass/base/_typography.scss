@@ -87,10 +87,13 @@ body{
 .paragraph{
   font-size: $default-font-size;
   color: white;
+  display: inline;
+  // TODO fixing with
+  width: 50%;
   &:not(:last-child){
     margin-bottom: 2rem;
   }
-  @include respond(phone) {
+  @include respond(tab-port) {
 font-size: $font-size-small;
     font-weight: 400;
     line-height: 1.1;

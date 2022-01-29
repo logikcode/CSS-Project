@@ -11,7 +11,9 @@
   box-shadow: 0 2rem 4rem rgba($color-black, .7);
   transition: transform .3s;
 
-
+@include respond(tab-port) {
+  padding: 1.5rem 2rem;
+}
   &__icon{
     background-color: white;
     font-size: 6rem;
@@ -20,6 +22,9 @@
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block;
+    @include respond(tab-port) {
+     margin-bottom: 0;
+    }
 
   }
 

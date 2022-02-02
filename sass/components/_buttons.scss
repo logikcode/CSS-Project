@@ -13,11 +13,13 @@
     position: relative;
     color: #777777;
     font-weight: 400;
-
-    // this below styles are only applicable to the button element
     border: none;
     cursor: pointer;
 
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+      padding: .7rem 1rem;
+    }
   }
 
   &:active, &:focus{
@@ -62,6 +64,9 @@
 
   &--white{
     background-color: $btn-white-background-color;
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+    }
     &::after{
       background-color: $btn-white-background-color;
     }
@@ -78,9 +83,17 @@
   //}
 
   &--green{
-    background-color: $color-primary-dark;
+    background-color: $color-white;
     font-weight: 700;
     color: $color-white;
+    @include respond(phone) {
+      margin-bottom: 2rem;
+      padding: .7rem 1rem;
+    }
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+      padding: 1rem 1.5rem;
+    }
     //background-color: $btn-white-background-color;
     &::after{
       background-color: $color-grey-light-1;

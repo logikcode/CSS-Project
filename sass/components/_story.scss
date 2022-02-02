@@ -10,6 +10,17 @@
   text-align: left;
   transform: skewX(-12deg);
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 6rem;
+
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
   &:hover .story__caption{
     transform: translate(-50%, -50%);
     opacity: 1;
@@ -32,6 +43,9 @@
     transform: translateX(-3rem) skewX(12deg);
     transition: all .5s;
 
+    @include respond(phone) {
+      transform: skewX(0);
+    }
 
   }
 
@@ -42,7 +56,6 @@
     backface-visibility: hidden;
     transition: all .5s;
 
-
   }
 
   &:hover &__image{
@@ -51,7 +64,11 @@
   }
 
   &__text {
+    transform: skewX(12deg);
 
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption{

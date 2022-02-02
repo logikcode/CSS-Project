@@ -30,6 +30,10 @@
     display: block;
     transition: all .3s;
 
+    &__radio-group{
+      width: 100%;
+    }
+
     &::-webkit-input-placeholder{
       color: $color-grey-dark-2;
     }
@@ -58,8 +62,10 @@
   &__radio-group{
     width: 48%;
     display: inline-block;
-
-
+    @include respond(tab-port){
+      width: 100%;
+      margin: 1rem;
+    }
   }
 
   &__radio-input{

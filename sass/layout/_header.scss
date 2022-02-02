@@ -8,6 +8,22 @@
   background-size: cover;
   //clip-path: polygon(0 0, 50% 80%, 100% 100%, 0% 100%);
   position: relative;
+  background-repeat: no-repeat;
+
+  @include respond(tab-port) {
+    background-size: 100%;
+    object-fit: cover;
+    height: 85vh;
+  }
+
+  @include respond(phone) {
+    background-size: 100%;
+    object-fit: cover;
+    height: 40vh;
+
+  }
+
+
 
   &__logo-container {
     top: 1rem;
@@ -16,6 +32,9 @@
 
     .header__logo {
       height: 8vh;
+      @include respond(tab-port) {
+      height: 5vh;
+      }
     }
   }
 
@@ -27,6 +46,11 @@
     transform: translate(-50%, -50%);
     text-align: center;
     backface-visibility: hidden;
+
+    @include respond(tab-port) {
+      width: 100%;
+      top: 100%;
+    }
 
 
   }

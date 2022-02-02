@@ -1,13 +1,5 @@
 
 
-body{
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: $default-font-size;
-  line-height: 1.5;
-  color: #777777;
-}
-
 .heading__primary{
   &--main{
     font-family: "Lato", sans-serif;
@@ -20,6 +12,7 @@ body{
     animation-name: headerMainAnimateFromLeft;
     animation-duration: 3s;
     animation-timing-function: ease-out;
+
 
     @include respond(tab-port){
       font-size: 2rem;
@@ -89,7 +82,7 @@ body{
   color: white;
   display: inline;
   // TODO fixing with
-  width: 50%;
+  width: 100%;
   &:not(:last-child){
     margin-bottom: 2rem;
   }

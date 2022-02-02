@@ -74,19 +74,17 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem; }
-  @media (max-width: 56.25em) {
-    body {
-      padding: 0;
-      margin: 0 auto;
-      width: 100%; } }
-
-body {
+  padding: 3rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
   color: #777777; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0;
+      margin: 0 auto;
+      width: 100%; } }
 
 .heading__primary--main {
   font-family: "Lato", sans-serif;
@@ -150,7 +148,7 @@ body {
   font-size: 1.6rem;
   color: white;
   display: inline;
-  width: 50%; }
+  width: 100%; }
   .paragraph:not(:last-child) {
     margin-bottom: 2rem; }
   @media (max-width: 56.25em) {
@@ -222,6 +220,8 @@ body {
   width: 90%;
   display: block;
   transition: all .3s; }
+  .form__input__radio-group {
+    width: 100%; }
   .form__input::-webkit-input-placeholder {
     color: #999999; }
   .form__input:focus:invalid {
@@ -239,6 +239,10 @@ body {
 .form__radio-group {
   width: 48%;
   display: inline-block; }
+  @media (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin: 1rem; } }
 
 .form__radio-input {
   display: none; }
@@ -303,6 +307,10 @@ body {
   font-weight: 400;
   border: none;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .btn, .btn:link, .btn:visited {
+      font-size: 1.5rem;
+      padding: .7rem 1rem; } }
 
 .btn:active, .btn:focus {
   outline: none;
@@ -336,13 +344,24 @@ body {
 
 .btn--white {
   background-color: #d9d7ce; }
+  @media (max-width: 56.25em) {
+    .btn--white {
+      margin-bottom: 2rem; } }
   .btn--white::after {
     background-color: #d9d7ce; }
 
 .btn--green {
-  background-color: #28b485;
+  background-color: #ffffff;
   font-weight: 700;
   color: #ffffff; }
+  @media (max-width: 37.5em) {
+    .btn--green {
+      margin-bottom: 2rem;
+      padding: .7rem 1rem; } }
+  @media (max-width: 56.25em) {
+    .btn--green {
+      margin-bottom: 2rem;
+      padding: 1rem 1.5rem; } }
   .btn--green::after {
     background-color: #f7f7f7; }
 
@@ -599,9 +618,56 @@ body {
   position: relative;
   height: 40rem;
   text-align: center; }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: inline-block;
+    position: absolute;
+    top: 60%;
+    left: 1rem;
+    text-align: center;
+    border-bottom: 2px solid yellow;
+    box-shadow: 0 3px 3px #cdb332; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .card__price-box {
+    margin-bottom: 7rem;
+    text-align: center; }
+  .card__price-only {
+    font-size: 1.4rem; }
+  .card__price-value {
+    font-size: 2.2rem;
+    font-weight: 100; }
+  .card__details {
+    height: auto;
+    margin: 0 auto;
+    font-style: initial;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 2rem;
+    position: absolute;
+    width: 100%;
+    top: 30rem;
+    text-align: left;
+    padding: 0 1em; }
+  .card__picture {
+    height: 23rem;
+    width: 95%;
+    display: inline-block;
+    background-blend-mode: screen;
+    margin-top: 2rem; }
+    .card__picture-1 {
+      background-image: linear-gradient(to bottom right, rgba(247, 247, 247, 0.3), black), url("../max-img/max-logo.png");
+      background-repeat: no-repeat;
+      background-size: cover; }
   .card__side {
     border-radius: 3rem;
-    height: 40rem;
+    height: 45rem;
     color: #ffffff;
     font-size: 2rem;
     text-transform: uppercase;
@@ -620,74 +686,97 @@ body {
       transform: rotateY(180deg);
       opacity: 0;
       backface-visibility: hidden; }
+      .card__side--back-1 {
+        background-image: linear-gradient(to bottom right, #ffb900, rgba(245, 113, 9, 0.95)); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to bottom left, rgba(245, 113, 9, 0.95), #ffb900); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0);
     opacity: 1; }
-    .card:hover .card__side--back-1 {
-      background-image: linear-gradient(to bottom right, #ffb900, rgba(245, 113, 9, 0.95)); }
-    .card:hover .card__side--back-2 {
-      background-image: linear-gradient(to bottom right, #777777, #000000); }
-  .card__picture {
-    height: 23rem;
-    width: 95%;
-    display: inline-block;
-    background-blend-mode: screen;
-    margin-top: 2rem; }
-    .card__picture-1 {
-      background-image: linear-gradient(to bottom right, rgba(247, 247, 247, 0.3), black), url("../max-img/max-logo.png");
-      background-repeat: no-repeat;
-      background-size: cover; }
-  .card .card__heading {
-    font-size: 2.8rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #ffffff;
-    display: inline-block;
-    position: absolute;
-    top: 65%;
-    margin: 0 auto;
-    left: 8rem;
-    text-align: center;
-    border-bottom: 2px solid yellow;
-    box-shadow: 0 3px 3px #cdb332;
-    width: 50%; }
-    @media (max-width: 37.5em) {
-      .card .card__heading {
-        font-size: 2.2rem;
-        left: 2rem;
-        width: 90%;
-        text-align: center; } }
-  .card .span__heading {
-    -webkit-box-decoration-break: clone;
-    padding: 1rem 1.5rem; }
-    @media (max-width: 37.5em) {
-      .card .span__heading {
-        width: 100%;
-        padding: 0;
+  @media (max-width: 37.5em) {
+    .card {
+      font-size: 2.2rem;
+      left: 2rem;
+      width: 90%;
+      text-align: center; } }
+  @media (max-width: 56.25em) {
+    .card {
+      overflow: hidden;
+      height: auto;
+      border-radius: 2rem;
+      background-color: white;
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.7); }
+      .card__heading {
+        font-size: 2.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #ffffff;
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
         text-align: center;
-        font-weight: 500;
-        font-size: 2.5rem; } }
-  .card__cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-  .card__price-box {
-    margin-bottom: 7rem;
-    text-align: center; }
-  .card__price-only {
-    font-size: 1.4rem; }
-  .card__price-value {
-    font-size: 2.2rem;
-    font-weight: 100; }
-  .card__details {
-    margin: .5rem auto; }
+        border-bottom: 2px solid yellow;
+        box-shadow: 0 3px 3px #cdb332;
+        width: 40%; }
+      .card__side {
+        border-radius: 0;
+        height: auto;
+        position: relative;
+        box-shadow: none; }
+        .card__side--front {
+          background-color: #777777;
+          backface-visibility: hidden; }
+        .card__side--back {
+          transform: rotateY(0);
+          opacity: 1;
+          border-radius: 0;
+          clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%); }
+      .card__cta {
+        position: relative;
+        padding-top: 4rem;
+        top: 0;
+        left: 0;
+        transform: translate(0); }
+      .card__details {
+        font-size: 1.4rem;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        top: 0;
+        text-align: left; }
+      .card__picture {
+        height: 23rem;
+        width: 95%;
+        display: inline-block;
+        background-blend-mode: screen;
+        margin-top: 2rem; }
+        .card__picture-1 {
+          background-image: linear-gradient(to bottom right, rgba(247, 247, 247, 0.3), black), url("../max-img/max-logo.png");
+          background-repeat: no-repeat;
+          background-size: cover; }
+      .card:hover .card__side--front {
+        transform: rotateY(0); } }
+
+.span__heading {
+  -webkit-box-decoration-break: clone;
+  padding: 1rem 1.5rem;
+  font-size: 2.75rem;
+  margin: 1rem 0; }
+  @media (max-width: 56.25em) {
+    .span__heading {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      font-weight: 500;
+      font-size: 2.5rem; } }
 
 .card__row {
+  position: relative;
   width: 100%;
-  height: 40rem;
+  height: 45rem;
   border-radius: 3rem;
   background-color: #777777;
   background-image: linear-gradient(to right, #777777, #000000);
@@ -736,26 +825,21 @@ body {
 .card__list {
   list-style: none;
   width: 100%;
-  height: 100%;
   margin: 0 auto;
   text-align: center; }
   @media (max-width: 37.5em) {
     .card__list {
       width: 100%; } }
   .card__list-item {
-    margin: 0 2rem;
     width: 100%;
     text-align: left;
     border-bottom: none;
-    font-size: 2.2rem;
     padding-bottom: 0;
     padding-left: .5rem;
     font-weight: 500;
     text-transform: capitalize; }
     .card__list-item:last-child {
       box-shadow: 0 2px 3px yellow; }
-    .card__list-item:first-child {
-      margin-top: 1rem; }
 
 .clearfix:after {
   content: "";
@@ -773,6 +857,14 @@ body {
   font-size: 1.6rem;
   text-align: left;
   transform: skewX(-12deg); }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 6rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); } }
   .story:hover .story__caption {
     transform: translate(-50%, -50%);
     opacity: 1; }
@@ -790,6 +882,9 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     transition: all .5s; }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: skewX(0); } }
   .story__image {
     width: 100%;
     height: 100%;
@@ -799,6 +894,11 @@ body {
   .story:hover .story__image {
     transform: translateX(-1.5rem) scale(1);
     filter: blur(0.3rem) brightness(80%); }
+  .story__text {
+    transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        transform: skewX(0); } }
   .story__caption {
     top: 50%;
     left: 50%;
@@ -832,18 +932,32 @@ body {
     border-right: 3px;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .3s .2s; }
+    @media (max-width: 56.25em) {
+      .popup__content {
+        display: block;
+        width: 85%;
+        overflow: visible; } }
   .popup__image {
-    display: block;
+    display: inline-block;
     width: 100%;
     object-fit: cover; }
   .popup__left {
     width: 33.333%;
     display: table-cell; }
+    @media (max-width: 56.25em) {
+      .popup__left {
+        width: 100%;
+        display: block; } }
   .popup__right {
     width: 66.666%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (max-width: 56.25em) {
+      .popup__right {
+        width: 100%;
+        display: block;
+        overflow-scrolling: auto; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 3rem;
@@ -875,13 +989,27 @@ body {
   properties (1) gradient and png image */
   background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)), url(../max-img/max-lady-on-electric-bike-header.png);
   background-size: cover;
-  position: relative; }
+  position: relative;
+  background-repeat: no-repeat; }
+  @media (max-width: 56.25em) {
+    .header {
+      background-size: 100%;
+      object-fit: cover;
+      height: 85vh; } }
+  @media (max-width: 37.5em) {
+    .header {
+      background-size: 100%;
+      object-fit: cover;
+      height: 40vh; } }
   .header__logo-container {
     top: 1rem;
     left: 1rem;
     position: absolute; }
     .header__logo-container .header__logo {
       height: 8vh; }
+      @media (max-width: 56.25em) {
+        .header__logo-container .header__logo {
+          height: 5vh; } }
   .header .heading__container {
     text-transform: uppercase;
     top: 70%;
@@ -890,6 +1018,10 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     backface-visibility: hidden; }
+    @media (max-width: 56.25em) {
+      .header .heading__container {
+        width: 100%;
+        top: 100%; } }
   .header__logo-container:hover {
     animation: heading-Sub-AnimateFromRight 2s; }
 
@@ -1192,14 +1324,24 @@ section {
 .booking {
   background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
   background-size: 100%;
-  height: 50rem;
+  background-repeat: no-repeat;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  /*
-    the flex experimental part
-   */ }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 75em) {
+    .booking {
+      background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 70%, transparent 70%), url(../img/nat-10.jpg);
+      background-size: cover; } }
+  @media (max-width: 75em) and (max-width: 56.25em) {
+    .booking {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%, transparent 50%), url(../img/nat-10.jpg); } }
   .booking__form {
     width: 50%; }
+    @media (max-width: 75em) {
+      .booking__form {
+        width: 70%; } }
+    @media (max-width: 56.25em) {
+      .booking__form {
+        width: 100%; } }
 
 .containe {
   display: flex;

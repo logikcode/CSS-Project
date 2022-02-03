@@ -11,7 +11,7 @@
     border-radius: 10rem;
     transition: all 1s;
     position: relative;
-    color: #777777;
+    color: $color-primary-dark;
     font-weight: 400;
     border: none;
     cursor: pointer;
@@ -19,6 +19,7 @@
     @include respond(tab-port) {
       font-size: 1.5rem;
       padding: .7rem 1rem;
+      background-color: $color-white;
     }
   }
 
@@ -64,6 +65,7 @@
 
   &--white{
     background-color: $btn-white-background-color;
+    color: $color-primary-dark;
     @include respond(tab-port) {
       margin-bottom: 2rem;
     }
@@ -85,7 +87,7 @@
   &--green{
     background-color: $color-white;
     font-weight: 700;
-    color: $color-white;
+    color: $color-primary-dark;
     @include respond(phone) {
       margin-bottom: 2rem;
       padding: .7rem 1rem;
@@ -114,6 +116,8 @@
     font-weight: 500;
     color: #f7f7f7;
     transition: all .5s;
+    float: left;
+    margin-top: 3rem;
   }
 
   &:hover{

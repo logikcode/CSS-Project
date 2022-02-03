@@ -10,6 +10,15 @@
   position: relative;
   background-repeat: no-repeat;
 
+  /* responsive images section using media queries */
+  @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+    background-image: linear-gradient(to bottom right ,
+            rgba($color-grey-dark-3, 0.5),
+            rgba(transparent, 0.5)),
+    url(../../max-img/max-lady-on-electric-bike-header.png);
+  }
+
+
   @include respond(tab-port) {
     background-size: 100%;
     object-fit: cover;

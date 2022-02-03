@@ -148,7 +148,8 @@ body {
   font-size: 1.6rem;
   color: white;
   display: inline;
-  width: 100%; }
+  width: 100%;
+  text-align: justify-all; }
   .paragraph:not(:last-child) {
     margin-bottom: 2rem; }
   @media (max-width: 56.25em) {
@@ -303,14 +304,15 @@ body {
   border-radius: 10rem;
   transition: all 1s;
   position: relative;
-  color: #777777;
+  color: #28b485;
   font-weight: 400;
   border: none;
   cursor: pointer; }
   @media (max-width: 56.25em) {
     .btn, .btn:link, .btn:visited {
       font-size: 1.5rem;
-      padding: .7rem 1rem; } }
+      padding: .7rem 1rem;
+      background-color: #ffffff; } }
 
 .btn:active, .btn:focus {
   outline: none;
@@ -343,7 +345,8 @@ body {
   animation-fill-mode: backwards; }
 
 .btn--white {
-  background-color: #d9d7ce; }
+  background-color: #d9d7ce;
+  color: #28b485; }
   @media (max-width: 56.25em) {
     .btn--white {
       margin-bottom: 2rem; } }
@@ -353,7 +356,7 @@ body {
 .btn--green {
   background-color: #ffffff;
   font-weight: 700;
-  color: #ffffff; }
+  color: #28b485; }
   @media (max-width: 37.5em) {
     .btn--green {
       margin-bottom: 2rem;
@@ -374,7 +377,9 @@ body {
   background-image: linear-gradient(to top, #28b485, #7ed56f);
   font-weight: 500;
   color: #f7f7f7;
-  transition: all .5s; }
+  transition: all .5s;
+  float: left;
+  margin-top: 3rem; }
 
 .btn-text:hover {
   transform: translateY(-0.5rem) scale(1.2); }
@@ -625,7 +630,7 @@ body {
     color: #ffffff;
     display: inline-block;
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 1rem;
     text-align: center;
     border-bottom: 2px solid yellow;
@@ -695,12 +700,6 @@ body {
   .card:hover .card__side--back {
     transform: rotateY(0);
     opacity: 1; }
-  @media (max-width: 37.5em) {
-    .card {
-      font-size: 2.2rem;
-      left: 2rem;
-      width: 90%;
-      text-align: center; } }
   @media (max-width: 56.25em) {
     .card {
       overflow: hidden;
@@ -752,13 +751,22 @@ body {
         width: 95%;
         display: inline-block;
         background-blend-mode: screen;
-        margin-top: 2rem; }
+        margin-top: 2rem;
+        object-fit: cover; }
         .card__picture-1 {
           background-image: linear-gradient(to bottom right, rgba(247, 247, 247, 0.3), black), url("../max-img/max-logo.png");
           background-repeat: no-repeat;
           background-size: cover; }
       .card:hover .card__side--front {
         transform: rotateY(0); } }
+  @media (max-width: 37.5em) {
+    .card {
+      font-size: 2.2rem;
+      left: 2rem;
+      width: 90%;
+      text-align: center; }
+      .card__heading {
+        font-size: 1.5rem; } }
 
 .span__heading {
   -webkit-box-decoration-break: clone;
@@ -772,6 +780,9 @@ body {
       text-align: center;
       font-weight: 500;
       font-size: 2.5rem; } }
+  @media (max-width: 37.5em) {
+    .span__heading {
+      font-size: 1.5rem; } }
 
 .card__row {
   position: relative;
@@ -780,64 +791,75 @@ body {
   border-radius: 3rem;
   background-color: #777777;
   background-image: linear-gradient(to right, #777777, #000000);
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 0; }
 
 .card__col-1-of-2 {
   background-image: linear-gradient(#000000, #777777);
-  max-width: 20%;
+  width: 20%;
+  height: 43rem;
   float: left;
-  text-align: left;
-  padding: .2rem;
-  color: #ffa200;
-  font-size: 6rem;
+  text-align: center;
+  padding: 0;
+  font-size: 5rem;
   font-weight: 700;
-  height: 25.7rem; }
-  @media (max-width: 37.5em) {
-    .card__col-1-of-2 {
-      width: 100%;
-      display: inline-block; } }
+  margin-left: 1rem;
+  display: block; }
+  .card__col-1-of-2 .card__col-2-of-2 {
+    width: 70%;
+    float: right;
+    text-align: left;
+    height: 43rem; }
+    @media (max-width: 37.5em) {
+      .card__col-1-of-2 .card__col-2-of-2 {
+        margin-left: 0; } }
+  .card__col-1-of-2 .card__row--heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ffa200; }
+    .card__col-1-of-2 .card__row--heading-span {
+      font-size: 4rem; }
+      @media (max-width: 56.25em) {
+        .card__col-1-of-2 .card__row--heading-span {
+          font-size: 2rem; } }
   .card__col-1-of-2-char {
     display: block;
-    margin-top: 0;
-    width: 100%;
-    text-align: center; }
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #ffa200; }
+    @media (max-width: 56.25em) {
+      .card__col-1-of-2-char {
+        font-size: 3.2rem; } }
+    @media (max-width: 37.5em) {
+      .card__col-1-of-2-char {
+        font-size: 2rem; } }
     .card__col-1-of-2-char:not(:last-child) {
       margin-bottom: 0; }
 
-.card__row--heading {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #ffa200; }
-  .card__row--heading-span {
-    font-size: 4rem; }
-
-.card__col-2-of-2 {
-  width: 80%;
-  float: left;
-  text-align: left;
-  margin-left: 1rem;
-  height: 25.5rem; }
-  @media (max-width: 37.5em) {
-    .card__col-2-of-2 {
-      margin-left: 0; } }
-
 .card__list {
   list-style: none;
-  width: 100%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: left; }
   @media (max-width: 37.5em) {
     .card__list {
-      width: 100%; } }
+      width: 60vw; } }
   .card__list-item {
-    width: 100%;
+    display: inline-block;
+    width: 70%;
     text-align: left;
     border-bottom: none;
     padding-bottom: 0;
     padding-left: .5rem;
     font-weight: 500;
     text-transform: capitalize; }
+    @media (max-width: 56.25em) {
+      .card__list-item {
+        font-size: 1.6rem; } }
+    @media (max-width: 37.5em) {
+      .card__list-item {
+        font-size: 1rem; } }
     .card__list-item:last-child {
       box-shadow: 0 2px 3px yellow; }
 
@@ -990,7 +1012,11 @@ body {
   background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)), url(../max-img/max-lady-on-electric-bike-header.png);
   background-size: cover;
   position: relative;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  /* responsive images section using media queries */ }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+    .header {
+      background-image: linear-gradient(to bottom right, rgba(51, 51, 51, 0.5), rgba(0, 0, 0, 0.5)), url(../max-img/max-lady-on-electric-bike-header.png); } }
   @media (max-width: 56.25em) {
     .header {
       background-size: 100%;
@@ -1342,28 +1368,3 @@ section {
     @media (max-width: 56.25em) {
       .booking__form {
         width: 100%; } }
-
-.containe {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  margin: 4rem 0; }
-  @media (max-width: 37.5em) {
-    .containe {
-      display: flex;
-      flex-flow: column; } }
-
-.flex-item {
-  width: 30rem; }
-
-.one {
-  background-color: red; }
-
-.two {
-  background-color: black; }
-
-.three {
-  background-color: #2998ff; }
-
-.four {
-  background-color: #fb565e; }

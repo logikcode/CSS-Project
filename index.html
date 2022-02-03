@@ -79,7 +79,13 @@
             </div>
 
             <div class="col-1-of-2 section__container-img">
+
                 <div class="composition">
+                    <img srcset="img/theimage1.png 400w, img/the-image-large1.png 1000w" alt="" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" src="&dash;">
+                    <img srcset="img/theimage2.png 400w, img/the-image-large2.png 1000w" alt="" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" src="&dash;">
+                    <img srcset="img/theimage3.png 400w, img/the-image-large3.png 1000w" alt="" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" src="&dash;">
+
+
                     <img alt="image one"  class="composition__img composition__img--img1" src="./max-img/scudeto-bike.png">
                     <img alt="image two" class="composition__img composition__img--img2" src="./max-img/carbon-card-image.png">
                     <img alt="image three"  class="composition__img composition__img--img3" src="./max-img/max-power-bike.png">
@@ -132,7 +138,6 @@
             </div>
         </div>
     </section>
-
     <!-- THIRD SECTION -- Card Section -->
     <section class="section-destination" id="section-dest" >
 <!--        <div class="u-center-text u-margin-bottom-medium u-heading-break">-->
@@ -183,7 +188,7 @@
             </div>
 
             <div class="col-1-of-3">
-                <div class="row card__row">
+                <div class=" card__row">
 
                     <h2 class="card__heading">
                         <span class="span__heading span__heading-1">Metro Africa Xpress</span>
@@ -362,7 +367,7 @@
 
 
                         <div>
-                            <button class = "btn btn--green">
+                            <button class = "btn btn--green u-margin-bottom-medium">
                                 Your Next Step <span class="arrow-right">&rarr;</span>
                             </button>
                         </div>
@@ -402,47 +407,25 @@
             </div>
         </div>
     </div>
-    <!--<div class="row-card">
-               <div class="column-1-of-3">
-               <div style="perspective: 1500px">
-                   <div style="height: 50px; background-color: #342578;"></div>
-               </div>
-               </div>
-               <div class="column-1-of-3"> One of three - 2</div>
-               <div class="column-1-of-3"> One of three - 3</div>
-           </div>
-    -->
-    <!--
-        <div class="card__row clearfix">
-            <h3 class="card__row--heading">
-                <span class="card__row--heading-span">Safety Rules</span>
-            </h3>
-            <div class="card__col-1-of-2">
-                <span class="card__col-1-of-2-char"> M </span>
-                <span class="card__col-1-of-2-char"> A </span>
-                <span class="card__col-1-of-2-char"> X </span>
-            </div>
 
-            <div class="card__col-2-of-2 ">
-                <div class="card__col-2-of-2--heading">
-                    <ul class="card__list">
-                        <li>Stay Alert</li>
-                        <li>Avoid Risky Situations</li>
-                        <li>Follow all traffics rules</li>
-                        <li>Ensure you wear a helmet</li>
-                        <li>Tell others to be safe</li>
-                        <li>Your life is precious</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
--->
 </main>
 <footer class="footer">
+    <!-- Responsive Image within HTML using ART Direction
+
+     <picture class="footer__logo">
+        <source srcset = "img/log-green-sm.png 1x, img/log-green-sm.png 2x" media="(max-width: 37.5rem)">
+        <img srcset="img/log-green-1xx.png 1x, img/log-green-2x 2x" alt="Footer Logo" src=" ">
+    </picture>
+
+
+
+     -->
+
 
     <div class="footer__logo-box">
-        <img alt="max-logo" class="footer__logo" src="./max-img/max-logo.png">
+        <!-- image logo with Density Switching inside html -->
+        <img alt="max-logo" class="footer__logo" src="./max-img/max-logo.png" srcset ="img/log-green.png 1k, img/log-green.png 2k">
     </div>
 
     <div class="row">
@@ -468,93 +451,7 @@
 
         </div>
 
-        <!--
-        <div class="footer__analogue-clock">
-            <div class="footer__seconds-hand"></div>
-            <div class="footer__minutes-hand"></div>
-            <div class="footer__hours-hand"></div>
-        </div> -->
     </div>
 </footer>
-<!-- -->
-<!--
-<div class="container">
-    <div class="row">
-        <div class="col-1-of-2">
-            1 0f 2
-        </div>
-        <div class="col-1-of-2">
-            1 of 2
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-1-of-3">
-            1 0f 3
-        </div>
-        <div class="col-1-of-3">
-            1 of 3
-        </div>
-        <div class="col-1-of-3">
-            1 of 3
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-1-of-3">
-            1 0f 3
-        </div>
-        <div class="col-2-of-3">
-            2 of 3
-        </div>
-
-    </div>
-
-    <div class="row">
-        <div class="col-1-of-4">
-            1 0f 4
-        </div>
-        <div class="col-1-of-4">
-            1 of 4
-        </div>
-        <div class="col-1-of-4">
-            1 0f 4
-        </div>
-        <div class="col-1-of-4">
-            1 of 4
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-1-of-4">
-            1 0f 4
-        </div>
-        <div class="col-1-of-4">
-            1 of 4
-        </div>
-        <div class="col-2-of-4">
-            2 of 4
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-1-of-4">
-            1 of 4
-        </div>
-        <div class="col-3-of-4">
-            3 of 4
-        </div>
-
-    </div>
-
--->
-
-<!--<div class="containe">-->
-<!--    <div class="flex-item one">1:One</div>-->
-<!--    <div class="flex-item two">2:Two</div>-->
-<!--    <div class="flex-item three">3:Thr</div>-->
-<!--    <div class="flex-item four">4:Fou</div>-->
-<!--</div>-->
 </body>
 </html>

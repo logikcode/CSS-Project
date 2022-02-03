@@ -81,8 +81,9 @@
   font-size: $default-font-size;
   color: white;
   display: inline;
-  // TODO fixing with
   width: 100%;
+  text-align: justify-all;
+
   &:not(:last-child){
     margin-bottom: 2rem;
   }

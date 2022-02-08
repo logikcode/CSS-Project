@@ -6,7 +6,7 @@ From base -> typography -> General Layout -> Grid -> Page Layout -> Components
 html{
   // this defines the value for 1rem which is 10px
   font-size: 62.5%;
-  background-color: rgba($color-grey, 1);
+  background-color: rgba(transparent, .5);
 
   @include respond(tab-port) { // less than 900px
     font-size: 50%; // 1rem is 8px
@@ -44,13 +44,20 @@ body{
   font-weight: 400;
   font-size: $default-font-size;
   line-height: 1.5;
-  color: #777777;
+  background-color: rgba($color-white, .5);
+
 
   @include respond(tab-port) {
     padding: 0;
     margin: 0 auto;
     width: 100%;
   }
+
+
 }
 
 
+::selection{
+  background-color: $color-grey;
+  color: $color-white;
+}

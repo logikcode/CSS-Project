@@ -1,7 +1,7 @@
 
 
 .header{
-  height: 90vh;
+  height: 85vh;
   /*using two images in the same element by using background-image
   properties (1) gradient and png image */
   background-image: linear-gradient(to bottom right , rgba(white, 0.5), rgba(transparent, 0.5)), url(../../max-img/max-lady-on-electric-bike-header.png);
@@ -11,13 +11,18 @@
   background-repeat: no-repeat;
 
   /* responsive images section using media queries */
-  @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+  (min-device-pixel-ratio: 2) and (min-width: 37.5em) {
     background-image: linear-gradient(to bottom right ,
             rgba($color-grey-dark-3, 0.5),
             rgba(transparent, 0.5)),
     url(../../max-img/max-lady-on-electric-bike-header.png);
   }
 
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0) ) {
+    height: 95vh;
+
+}
 
   @include respond(tab-port) {
     background-size: 100%;

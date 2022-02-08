@@ -4,7 +4,16 @@
   "description": "fun-filled css project",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+    "watch:sass": "node-sass sass/main.scss css/styles.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+
+
+    "compile:sass": "node-sass sass/main.scss css/styles.comp.css",
+    "concat:css": "concat -o css/styles.concat.css css/font-icon-styles.css css/styles.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 8 versions' css/styles.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +26,11 @@
   },
   "homepage": "https://github.com/MANUELTEC-NG/Project-CSS#readme",
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "autoprefixer": "^10.4.2",
+    "concat": "^1.0.3",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.6",
+    "run-all": "^1.0.1"
   }
 }
